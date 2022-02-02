@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
   btnDiv.appendChild(button);
 
   let textBox = document.getElementById("boxText");
-
   let boxBtn = document.getElementById("boxBtn");
 
   button.addEventListener("click", function () {
@@ -28,4 +27,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let text = textBox.value;
     alert(text);
   });
+
+  document.getElementById("hoverdiv").addEventListener("mouseover", over);
+
+  document.getElementById("hoverdiv").addEventListener("mouseout", out);
+
+  function over() {
+    document.getElementById("hoverdiv").style.background = "red";
+  }
+
+  function out() {
+    document.getElementById("hoverdiv").style.background = "white";
+  }
 });
