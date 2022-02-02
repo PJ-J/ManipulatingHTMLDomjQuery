@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     alert(text);
   });
 
+  // select hover div and associated functions
   document.getElementById("hoverdiv").addEventListener("mouseover", over);
 
   document.getElementById("hoverdiv").addEventListener("mouseout", out);
@@ -39,4 +40,33 @@ document.addEventListener("DOMContentLoaded", function () {
   function out() {
     document.getElementById("hoverdiv").style.background = "white";
   }
+
+  // displaying number corresponding to covalence instructions
+  let h34 = document.createElement("h3");
+  let h3Text4 = document.createTextNode("4.");
+  h34.appendChild(h3Text4);
+  document.body.appendChild(h34);
+
+  //random color function
+  let randColor =
+      "rgb(" +
+      Math.floor(Math.random() * 255) +
+      "," +
+      Math.floor(Math.random() * 255) +
+      "," +
+      Math.floor(Math.random() * 255) +
+      ")";
+
+  //create p element with text
+  let para = document.createElement("p");
+  let paraText = document.createTextNode("Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dolor veritatis eligendi dolore aperiam, quaerat rerum corrupti, labore obcaecati aut incidunt ducimus est autem! Dolores ipsum blanditiis ut saepe quaerat!");
+  para.appendChild(paraText);
+  document.body.appendChild(para);
+  para.id = "ptext";
+
+  let ptext = document.getElementById("ptext")
+
+  ptext.addEventListener("click", function() {
+    ptext.style.color = randColor;
+  });
 });
