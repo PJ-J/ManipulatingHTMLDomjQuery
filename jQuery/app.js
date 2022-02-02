@@ -29,5 +29,20 @@ $(function () {
       this.style.backgroundColor = "white";
     });
 
+    //random color function
+    let randColor =
+    "rgb(" +
+    Math.floor(Math.random() * 255) +
+    "," +
+    Math.floor(Math.random() * 255) +
+    "," +
+    Math.floor(Math.random() * 255) +
+    ")";
+
+    //click p for random color
+    $("#lorem").on("click", function () {
+      this.style.color = randColor;
+    });
+
     
 });
