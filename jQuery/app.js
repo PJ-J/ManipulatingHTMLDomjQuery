@@ -44,10 +44,32 @@ $(function () {
     this.style.color = randColor;
   });
 
+  //add span w name on btn click
   const name = "PJ Jones";
   let span = $("<span>" + name + "</span>");
 
   $("#nameBtn").on("click", function () {
     span.appendTo($("#empty"));
+  });
+
+  //friend array
+  let friends = [
+    "Larry",
+    "Amanda",
+    "Alyssa",
+    "Thomas",
+    "Phillip",
+    "Megan",
+    "John",
+    "David",
+    "Jake",
+    "Blorpo",
+  ];
+
+  let i = 0;
+  $("#listBtn").on("click", function () {
+    const li = $("<li>" + friends[i] + "</li>");
+    $("#ul").append(li);
+    i++;
   });
 });
