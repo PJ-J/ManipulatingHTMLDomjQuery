@@ -49,24 +49,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //random color function
   let randColor =
-      "rgb(" +
-      Math.floor(Math.random() * 255) +
-      "," +
-      Math.floor(Math.random() * 255) +
-      "," +
-      Math.floor(Math.random() * 255) +
-      ")";
+    "rgb(" +
+    Math.floor(Math.random() * 255) +
+    "," +
+    Math.floor(Math.random() * 255) +
+    "," +
+    Math.floor(Math.random() * 255) +
+    ")";
 
   //create p element with text
   let para = document.createElement("p");
-  let paraText = document.createTextNode("Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dolor veritatis eligendi dolore aperiam, quaerat rerum corrupti, labore obcaecati aut incidunt ducimus est autem! Dolores ipsum blanditiis ut saepe quaerat!");
+  let paraText = document.createTextNode(
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dolor veritatis eligendi dolore aperiam, quaerat rerum corrupti, labore obcaecati aut incidunt ducimus est autem! Dolores ipsum blanditiis ut saepe quaerat!"
+  );
   para.appendChild(paraText);
   document.body.appendChild(para);
   para.id = "ptext";
 
-  let ptext = document.getElementById("ptext")
+  let ptext = document.getElementById("ptext");
 
-  ptext.addEventListener("click", function() {
+  ptext.addEventListener("click", function () {
     ptext.style.color = randColor;
   });
 
@@ -76,14 +78,13 @@ document.addEventListener("DOMContentLoaded", function () {
   h35.appendChild(h3Text5);
   document.body.appendChild(h35);
 
-
   //create empty div and span element with text
   let emptyDiv = document.createElement("div");
   let span = document.createElement("span");
   let spanText = document.createTextNode("PJ Jones");
   span.appendChild(spanText);
   document.body.appendChild(emptyDiv);
-  
+
   // put button with text in div
   let button2 = document.createElement("button");
   let btnDiv2 = document.createElement("div");
@@ -94,7 +95,35 @@ document.addEventListener("DOMContentLoaded", function () {
   btnDiv2.appendChild(button2);
 
   // on click add span w name to empty div
-  button2.addEventListener("click", function() {
+  button2.addEventListener("click", function () {
     emptyDiv.appendChild(span);
+  });
+
+  //friend array
+  let friends = [
+    "Larry",
+    "Amanda",
+    "Alyssa",
+    "Thomas",
+    "Phillip",
+    "Megan",
+    "John",
+    "David",
+    "Jake",
+    "Blorpo",
+  ];
+
+  let friendBtn = document.getElementById("listBtn");
+  let ul = document.getElementById("ul");
+
+  let i = 0;
+
+  friendBtn.addEventListener("click", function () {
+    let friendText = document.createTextNode(friends[i]);
+    let li = document.createElement("li");
+    li.id = i;
+    li.appendChild(friendText);
+    ul.appendChild(li);
+    i++;
   });
 });
