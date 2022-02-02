@@ -69,4 +69,32 @@ document.addEventListener("DOMContentLoaded", function () {
   ptext.addEventListener("click", function() {
     ptext.style.color = randColor;
   });
+
+  // displaying number corresponding to covalence instructions
+  let h35 = document.createElement("h3");
+  let h3Text5 = document.createTextNode("5.");
+  h35.appendChild(h3Text5);
+  document.body.appendChild(h35);
+
+
+  //create empty div and span element with text
+  let emptyDiv = document.createElement("div");
+  let span = document.createElement("span");
+  let spanText = document.createTextNode("PJ Jones");
+  span.appendChild(spanText);
+  document.body.appendChild(emptyDiv);
+  
+  // put button with text in div
+  let button2 = document.createElement("button");
+  let btnDiv2 = document.createElement("div");
+  document.body.appendChild(btnDiv2);
+  let btnText2 = document.createTextNode("Add Name");
+  button2.id = "button2";
+  button2.appendChild(btnText2);
+  btnDiv2.appendChild(button2);
+
+  // on click add span w name to empty div
+  button2.addEventListener("click", function() {
+    emptyDiv.appendChild(span);
+  });
 });
