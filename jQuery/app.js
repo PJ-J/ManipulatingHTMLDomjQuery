@@ -19,5 +19,15 @@ $(function () {
   $("#boxBtn").click(function () {
     alert($("#boxText").val());
   });
-  
+
+  // hover to change bg color
+  $("#hover")
+    .on("mouseover", function () {
+      this.style.backgroundColor = "red";
+    })
+    .on("mouseout", function () {
+      this.style.backgroundColor = "white";
+    });
+
+    
 });
