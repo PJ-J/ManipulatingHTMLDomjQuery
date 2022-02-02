@@ -29,8 +29,8 @@ $(function () {
       this.style.backgroundColor = "white";
     });
 
-    //random color function
-    let randColor =
+  //random color function
+  let randColor =
     "rgb(" +
     Math.floor(Math.random() * 255) +
     "," +
@@ -39,10 +39,15 @@ $(function () {
     Math.floor(Math.random() * 255) +
     ")";
 
-    //click p for random color
-    $("#lorem").on("click", function () {
-      this.style.color = randColor;
-    });
+  //click p for random color
+  $("#lorem").on("click", function () {
+    this.style.color = randColor;
+  });
 
-    
+  const name = "PJ Jones";
+  let span = $("<span>" + name + "</span>");
+
+  $("#nameBtn").on("click", function () {
+    span.appendTo($("#empty"));
+  });
 });
