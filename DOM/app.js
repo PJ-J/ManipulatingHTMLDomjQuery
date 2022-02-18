@@ -47,15 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   h34.appendChild(h3Text4);
   document.body.appendChild(h34);
 
-  //random color function
-  let randColor =
-    "rgb(" +
-    Math.floor(Math.random() * 255) +
-    "," +
-    Math.floor(Math.random() * 255) +
-    "," +
-    Math.floor(Math.random() * 255) +
-    ")";
+  
 
   //create p element with text
   let para = document.createElement("p");
@@ -69,6 +61,15 @@ document.addEventListener("DOMContentLoaded", function () {
   let ptext = document.getElementById("ptext");
 
   ptext.addEventListener("click", function () {
+    //random color function
+  let randColor =
+  "rgb(" +
+  Math.floor(Math.random() * 255) +
+  "," +
+  Math.floor(Math.random() * 255) +
+  "," +
+  Math.floor(Math.random() * 255) +
+  ")";
     ptext.style.color = randColor;
   });
 
