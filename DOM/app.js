@@ -1,16 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   // creating elements
   let btnDiv = document.createElement("div");
+  btnDiv.id = "div1";
   let h3 = document.createElement("h3");
   let button = document.createElement("button");
 
   // displaying number corresponding to covalence instructions
-  document.body.appendChild(h3);
+  document.getElementById("div1").appendChild(h3);
   let h3Text = document.createTextNode("1.");
   h3.appendChild(h3Text);
 
   // put button with text in div
-  document.body.appendChild(btnDiv);
+  document.getElementById("div1").appendChild(btnDiv);
   let btnText = document.createTextNode("Alert Button");
   button.className = "button";
   button.appendChild(btnText);
@@ -42,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // displaying number corresponding to covalence instructions
-  let h34 = document.createElement("h3");
-  let h3Text4 = document.createTextNode("4.");
-  h34.appendChild(h3Text4);
-  document.body.appendChild(h34);
+  // let h34 = document.createElement("h3");
+  // let h3Text4 = document.createTextNode("4.");
+  // h34.appendChild(h3Text4);
+  // document.getElementById("div1").appendChild(h34);
 
   
 
@@ -55,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dolor veritatis eligendi dolore aperiam, quaerat rerum corrupti, labore obcaecati aut incidunt ducimus est autem! Dolores ipsum blanditiis ut saepe quaerat!"
   );
   para.appendChild(paraText);
-  document.body.appendChild(para);
+  document.getElementById("div4").appendChild(para);
   para.id = "ptext";
 
   let ptext = document.getElementById("ptext");
@@ -74,22 +75,22 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // displaying number corresponding to covalence instructions
-  let h35 = document.createElement("h3");
-  let h3Text5 = document.createTextNode("5.");
-  h35.appendChild(h3Text5);
-  document.body.appendChild(h35);
+  // let h35 = document.createElement("h3");
+  // let h3Text5 = document.createTextNode("5.");
+  // h35.appendChild(h3Text5);
+  // document.getElementById("div1").appendChild(h35);
 
   //create empty div and span element with text
   let emptyDiv = document.createElement("div");
   let span = document.createElement("span");
   let spanText = document.createTextNode("PJ Jones");
   span.appendChild(spanText);
-  document.body.appendChild(emptyDiv);
+  document.getElementById("div5").appendChild(emptyDiv);
 
   // put button with text in div
   let button2 = document.createElement("button");
   let btnDiv2 = document.createElement("div");
-  document.body.appendChild(btnDiv2);
+  document.getElementById("div5").appendChild(btnDiv2);
   let btnText2 = document.createTextNode("Add Name");
   button2.id = "button2";
   button2.appendChild(btnText2);

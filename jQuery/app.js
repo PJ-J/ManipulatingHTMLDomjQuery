@@ -4,12 +4,12 @@ $(function () {
   // add covalence number
   let h31 = $("<h3>");
   h31.html("1.");
-  h31.appendTo("body");
+  h31.appendTo($("#div1"));
 
   //add button and click for alert
   let btn = $("<button>");
   btn.html("Alert");
-  btn.appendTo("body");
+  btn.appendTo($("#div1"));
 
   btn.click(function () {
     alert("you really did it");
@@ -29,18 +29,19 @@ $(function () {
       this.style.backgroundColor = "white";
     });
 
-  //random color function
-  let randColor =
-    "rgb(" +
-    Math.floor(Math.random() * 255) +
-    "," +
-    Math.floor(Math.random() * 255) +
-    "," +
-    Math.floor(Math.random() * 255) +
-    ")";
-
+  
   //click p for random color
   $("#lorem").on("click", function () {
+    //random color function
+  let randColor =
+  "rgb(" +
+  Math.floor(Math.random() * 255) +
+  "," +
+  Math.floor(Math.random() * 255) +
+  "," +
+  Math.floor(Math.random() * 255) +
+  ")";
+
     this.style.color = randColor;
   });
 
