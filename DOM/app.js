@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   boxBtn.addEventListener("click", function () {
     let text = textBox.value;
     alert(text);
+    textBox.value = '';
   });
 
   // select hover div and associated functions
@@ -41,12 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function out() {
     document.getElementById("hoverdiv").style.background = "white";
   }
-
-  // displaying number corresponding to covalence instructions
-  // let h34 = document.createElement("h3");
-  // let h3Text4 = document.createTextNode("4.");
-  // h34.appendChild(h3Text4);
-  // document.getElementById("div1").appendChild(h34);
 
   //create p element with text
   let para = document.createElement("p");
@@ -71,12 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ")";
     ptext.style.color = randColor;
   });
-
-  // displaying number corresponding to covalence instructions
-  // let h35 = document.createElement("h3");
-  // let h3Text5 = document.createTextNode("5.");
-  // h35.appendChild(h3Text5);
-  // document.getElementById("div1").appendChild(h35);
 
   //create empty div and span element with text
   let emptyDiv = document.createElement("div");

@@ -18,6 +18,7 @@ $(function () {
   //click button for alert containing text input
   $("#boxBtn").click(function () {
     alert($("#boxText").val());
+    $("#boxText").val('');
   });
 
   // hover to change bg color
