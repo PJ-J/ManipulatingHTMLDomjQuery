@@ -48,8 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // h34.appendChild(h3Text4);
   // document.getElementById("div1").appendChild(h34);
 
-  
-
   //create p element with text
   let para = document.createElement("p");
   let paraText = document.createTextNode(
@@ -63,14 +61,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   ptext.addEventListener("click", function () {
     //random color function
-  let randColor =
-  "rgb(" +
-  Math.floor(Math.random() * 255) +
-  "," +
-  Math.floor(Math.random() * 255) +
-  "," +
-  Math.floor(Math.random() * 255) +
-  ")";
+    let randColor =
+      "rgb(" +
+      Math.floor(Math.random() * 255) +
+      "," +
+      Math.floor(Math.random() * 255) +
+      "," +
+      Math.floor(Math.random() * 255) +
+      ")";
     ptext.style.color = randColor;
   });
 
@@ -121,11 +119,13 @@ document.addEventListener("DOMContentLoaded", function () {
   let i = 0;
 
   friendBtn.addEventListener("click", function () {
-    let friendText = document.createTextNode(friends[i]);
-    let li = document.createElement("li");
-    li.id = i;
-    li.appendChild(friendText);
-    ul.appendChild(li);
-    i++;
+    if (i < 10) {
+      let friendText = document.createTextNode(friends[i]);
+      let li = document.createElement("li");
+      li.id = i;
+      li.appendChild(friendText);
+      ul.appendChild(li);
+      i++;
+    }
   });
 });

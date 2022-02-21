@@ -29,18 +29,17 @@ $(function () {
       this.style.backgroundColor = "white";
     });
 
-  
   //click p for random color
   $("#lorem").on("click", function () {
     //random color function
-  let randColor =
-  "rgb(" +
-  Math.floor(Math.random() * 255) +
-  "," +
-  Math.floor(Math.random() * 255) +
-  "," +
-  Math.floor(Math.random() * 255) +
-  ")";
+    let randColor =
+      "rgb(" +
+      Math.floor(Math.random() * 255) +
+      "," +
+      Math.floor(Math.random() * 255) +
+      "," +
+      Math.floor(Math.random() * 255) +
+      ")";
 
     this.style.color = randColor;
   });
@@ -69,8 +68,10 @@ $(function () {
 
   let i = 0;
   $("#listBtn").on("click", function () {
-    const li = $("<li>" + friends[i] + "</li>");
-    $("#ul").append(li);
-    i++;
+    if (i < 10) {
+      const li = $("<li>" + friends[i] + "</li>");
+      $("#ul").append(li);
+      i++;
+    }
   });
 });
